@@ -1,0 +1,35 @@
+@import './_variables.less';
+@import './_card.less';
+
+strong, b, h1, h2, h3 {
+	font-family: @headingsFontFamily;
+	font-weight: normal;
+}
+
+body {
+	background: @white;
+	color: @black;
+	font-size: 100%;
+	font-family: @baseFontFamily;
+	margin: 0;
+	-moz-font-feature-settings:"onum" 1, "liga" 1, "dlig" 1, "hlig" 1, "clig" 1;
+	-ms-font-feature-settings:"onum" 1, "liga" 1, "dlig" 1, "hlig" 1, "clig" 1;
+	-o-font-feature-settings:"onum" 1, "liga" 1, "dlig" 1, "hlig" 1, "clig" 1;
+	-webkit-font-feature-settings:"onum" 1, "liga" 1, "dlig" 1, "hlig" 1, "clig" 1;
+	font-feature-settings:"onum" 1, "liga" 1, "dlig" 1, "hlig" 1, "clig" 1;
+}
+
+.container {
+	max-width: 1080px;
+	padding-left: .5em;
+	padding-right: .5em;
+	margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}

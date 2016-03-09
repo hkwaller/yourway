@@ -1,0 +1,26 @@
+[
+  {
+    "navn": "Kitesurf",
+    "bilde": "kite",
+    "pris": 500,
+    "beskrivelse": "kitea lite",
+    "lengde": "2 dager",
+    "selected": false
+  },
+  {
+    "navn": "Ski",
+    "bilde": "ski",
+    "pris": 300,
+    "beskrivelse": "gå på ski å såå",
+    "lengde": "1 dag",
+    "selected": false
+  },
+  {
+    "navn": "Fotball",
+    "bilde": "fotball",
+    "pris": 100,
+    "beskrivelse": "sparka på bollen",
+    "lengde": "3 dager",
+    "selected": false
+  }
+]
