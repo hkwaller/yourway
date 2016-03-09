@@ -117,27 +117,30 @@ class App extends Component {
           {this.state.selectedActivities.length > 0 ? <div><div className="row-heading"><h2>Overnatting</h2></div><div className="card-row">{::this.renderSleepOptions()}</div></div> : null}
         </div>
         <div className="right">
+          <h3>Informasjon</h3>
           <ul className="hero">
             <li><img src="img/green.png" />Krever ingen forkunnskaper</li>
             <li><img src="img/orange.png" />Moderat</li>
             <li><img src="img/red.png" />Krevende</li>
           </ul>
+          <h3>Pris</h3>
           <div className="price-row">
             <div>{this.state.pris}</div>
           </div>
+          <h3>Valgt</h3>
           <ul className="selected-things">
+            {this.state.selectedTours.length === 0 ? 'Ingen valg gjort enda' : null}
             {this.state.selectedTours.map(tur => {
-              return <li>{tur.navn} - {tur.pris} kr</li>
+              return <li key={tur.navn}>{tur.navn} - {tur.pris} kr</li>
             })}
 
             {this.state.selectedActivities.map(aktivitet => {
-              return <li>{aktivitet.navn} - {aktivitet.pris} kr</li>
+              return <li key={aktivitet.navn}>{aktivitet.navn} - {aktivitet.pris} kr</li>
             })}
 
             {this.state.selectedOvernatting.map(overnatting => {
-              return <li>{overnatting.navn} - {overnatting.pris} kr</li>
+              return <li key={overnatting.navn}>{overnatting.navn} - {overnatting.pris} kr</li>
             })}
-
           </ul>
         </div>
       </div>

@@ -13,7 +13,6 @@ const Card = ({objekt, clickHandler}) => {
       <div className={difficultyClassNames}></div>
       <div className="card-name">{navn}</div>
       <div className="card-details">
-        <div className="card-description">{beskrivelse}</div>
         <div className="card-price">{pris} kr</div>
       </div>
     </div>

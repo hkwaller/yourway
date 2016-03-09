@@ -1,29 +1,72 @@
 [
   {
-    "navn": "Kitesurf",
-    "bilde": "kite",
+    "navn": "Brevandring",
+    "bilde": "Brevandring",
     "pris": 500,
-    "beskrivelse": "kitea lite",
-    "lengde": "2 dager",
     "selected": false,
-    "vanskelighetsgrad": "yellow"
+    "vanskelighetsgrad": "orange"
   },
   {
-    "navn": "Ski",
-    "bilde": "ski",
-    "pris": 300,
-    "beskrivelse": "gå på ski å såå",
-    "lengde": "1 dag",
+    "navn": "Ekspedisjonskurs",
+    "bilde": "Ekspedisjonskurs",
+    "pris": 500,
     "selected": false,
-    "vanskelighetsgrad": "yellow"
+    "vanskelighetsgrad": "green"
   },
   {
-    "navn": "Fotball",
-    "bilde": "fotball",
+    "navn": "Fiske",
+    "bilde": "Fiske",
     "pris": 100,
-    "beskrivelse": "sparka på bollen",
-    "lengde": "3 dager",
     "selected": false,
     "vanskelighetsgrad": "red"
-  }
+  },
+  {
+    "navn": "Hundekjøring",
+    "bilde": "Hundekjoring",
+    "pris": 100,
+    "selected": false,
+    "vanskelighetsgrad": "green"
+  },
+  {
+    "navn": "Langtur på Ski",
+    "bilde": "langturpaski",
+    "pris": 100,
+    "selected": false,
+    "vanskelighetsgrad": "orange"
+  },
+  {
+    "navn": "Seiltur",
+    "bilde": "seiltur",
+    "pris": 100,
+    "selected": false,
+    "vanskelighetsgrad": "green"
+  },
+  {
+    "navn": "Skiekspedisjon",
+    "bilde": "skiekspedisjon",
+    "pris": 100,
+    "selected": false,
+    "vanskelighetsgrad": "red"
+  },
+  {
+    "navn": "Ski & Sail",
+    "bilde": "skisail",
+    "pris": 100,
+    "selected": false,
+    "vanskelighetsgrad": "orange"
+  },
+  {
+    "navn": "Telttur",
+    "bilde": "telttur",
+    "pris": 100,
+    "selected": false,
+    "vanskelighetsgrad": "green"
+  },
+  {
+    "navn": "Topptur",
+    "bilde": "topptur",
+    "pris": 100,
+    "selected": false,
+    "vanskelighetsgrad": "orange"
+  },
 ]
