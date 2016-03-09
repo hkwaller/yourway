@@ -13,7 +13,7 @@ const Card = ({objekt, clickHandler}) => {
       <div className={difficultyClassNames}></div>
       <div className="card-name">{navn}</div>
       <div className="card-details">
-        <div className="card-price">{pris} kr</div>
+        {pris ? <div className="card-price">{pris} kr</div> : null}
       </div>
     </div>
   )

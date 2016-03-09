@@ -1,15 +1,37 @@
 [
   {
-    "navn": "Overnatting i Oslomarka",
-    "bilde": "oslo",
-    "pris": 2000,
+    "navn": "Finse",
+    "bilde": "Finse",
     "selected": false,
-    "vanskelighetsgrad": "green"
   },
   {
-    "navn": "Overnatting i en annen marka",
-    "bilde": "another",
-    "pris": 3000,
-    "vanskelighetsgrad": "red"
+    "navn": "Hardangervidda",
+    "bilde": "hardangervidda",
+    "selected": false
+  },
+  {
+    "navn": "Nordpolen",
+    "bilde": "Nordpolen",
+    "selected": false
+  },
+  {
+    "navn": "Oslomarka",
+    "bilde": "Oslomarka",
+    "selected": false
+  },
+  {
+    "navn": "Romsdalen",
+    "bilde": "Romsdalen",
+    "selected": false
+  },
+  {
+    "navn": "Stryn",
+    "bilde": "Stryn",
+    "selected": false
+  },
+  {
+    "navn": "Svalbard",
+    "bilde": "Svalbard",
+    "selected": false
   },
 ]
