@@ -7,7 +7,7 @@ const Thumbnail = ({objekt, clicked}) => {
   return (
     <div className="thumbnail">
       <div className={classes} />
-      <span>{objekt.navn}{objekt.pris ? `- ${objekt.pris} kr` : null}</span>
+      <span>{objekt.navn}{objekt.pris ? ` - ${objekt.pris} kr` : null}</span>
       <i onClick={clicked} className="icon ion-close" name={objekt.navn}></i>
     </div>
   )

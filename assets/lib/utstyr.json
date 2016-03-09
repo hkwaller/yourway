@@ -1,0 +1,27 @@
+[
+  {
+    "navn": "Skredsøker",
+    "bilde": "Skredsoker",
+    "pris": 100,
+    "selected": false,
+  },
+  {
+    "navn": "Sovepose",
+    "bilde": "Sovepose",
+    "pris": 100,
+    "selected": false,
+  },
+  {
+    "navn": "Telt",
+    "bilde": "Telt",
+    "pris": 300,
+    "selected": false,
+  },
+  {
+    "navn": "Toppturski",
+    "bilde": "Toppturski",
+    "pris": 390,
+    "selected": false,
+  },
+
+]
