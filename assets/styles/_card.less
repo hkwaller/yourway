@@ -1,70 +1,61 @@
 .card-row {
   display: flex;
-  padding: 2em;
+  padding: 1em 2em 2em 0;
+}
+
+.row-heading {
+  h2 {
+    margin: 0;
+    font-size: 1.4em;
+  }
 }
 
 .card {
   margin-right: 2em;
   color: @white;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  font-size: 0.8em;
+  padding: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-size: cover;
-  border: 10px solid transparent;
+  padding-bottom: 1em;
 
   .card-name {
     font-size: 1.1em;
+    text-align: center;
+    z-index: 2;
+    margin-top: -1.5em;
   }
 
   .card-details {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    transition: margin-bottom 0.1s ease-in;
+    pointer-events: none;
+    display: none;
+    margin-top: 3em;
+    text-align: center;
+  }
+
+  &:hover .card-details {
+    display: block;
+  }
+
+  .card-difficulty {
+    width: 0;
+  	height: 0;
+  	border-left: 20px solid transparent;
+  	border-right: 20px solid transparent;
+    transform: rotate(45deg);
+    margin: -11px -21px 11px auto;
+    border-bottom: 20px solid transparent;
   }
 }
 
 .selected {
-  border: 10px solid black;
-}
-
-.oslo {
-  background-image: url(img/oslo.jpeg);
-
-  &:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(img/oslo.jpeg);
-  }
-}
-
-.another {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(img/another.jpg);
-
-  &:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(img/another.jpg);
-  }
-}
-
-.ski {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(img/ski.jpeg);
-
-  &:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(img/ski.jpeg);
-  }
-}
-
-.kite {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(img/kite.jpg);
-
-  &:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(img/kite.jpg);
-  }
-}
-
-.fotball {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(img/fotball.jpg);
-
-  &:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(img/fotball.jpg);
-  }
+  border-bottom: 10px solid @green;
 }

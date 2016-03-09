@@ -5,7 +5,8 @@
     "pris": 2000,
     "beskrivelse": "superflott tur i oslomarka",
     "lengde": "2 dager",
-    "selected": false
+    "selected": false,
+    "vanskelighetsgrad": "green"
   },
   {
     "navn": "Overnatting i en annen marka",
@@ -13,6 +14,6 @@
     "pris": 3000,
     "beskrivelse": "superflott tur i oslomarka",
     "lengde": "2 dager",
-    "selected": false
+    "vanskelighetsgrad": "red"
   },
 ]

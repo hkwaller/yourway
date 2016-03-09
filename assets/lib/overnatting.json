@@ -1,0 +1,23 @@
+[
+  {
+    "navn": "Hotel",
+    "bilde": "hotel",
+    "pris": 1500,
+    "beskrivelse": "bo på hotell",
+    "selected": false,
+  },
+  {
+    "navn": "Hytte",
+    "bilde": "hytte",
+    "pris": 500,
+    "beskrivelse": "bo på hytte og såå",
+    "selected": false,
+  },
+  {
+    "navn": "Telt",
+    "bilde": "tent",
+    "pris": 100,
+    "beskrivelse": "bo i et telt i skauen",
+    "selected": false,
+  }
+]
