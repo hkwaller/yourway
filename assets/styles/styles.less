@@ -2,6 +2,7 @@
 @import './_card.less';
 @import './_pics.less';
 @import './_first.less';
+@import './_finished.less';
 @import './_thumbnail.less';
 
 strong, b, h1, h2, h3 {
@@ -42,10 +43,11 @@ body {
 }
 
 .app {
-	padding: 0 0 20px 20px;
+	padding: 0 0 0 4em;
 	display: flex;
 	flex-wrap: wrap;
 	height: 90%;
+	margin-bottom: 7em;
 }
 
 .left {
@@ -56,13 +58,13 @@ body {
 }
 
 .right {
-	flex-basis: 20%;
+	flex-basis: 16%;
 	display: flex;
 	flex-direction: column;
 	position: fixed;
-	height: 100%;
+	top: -20px;
 	background: #dafcf0;
-	padding: 20px 20px;
+	padding: 40px 40px;
 	h3 {
 		text-align: center;
 	}
@@ -89,7 +91,7 @@ body {
 .price-row {
 	display: flex;
 	padding: 50px;
-	background: @green;
+	background: rgba(0, 0, 0, 0.80);
 	color: @white;
 	margin: 0 auto;
 	height: 50px;
@@ -102,7 +104,7 @@ body {
 }
 
 .price-row::after {
-	content: 'p/p';
+	content: 'kr/p';
 	font-size: 0.4em;
 	margin-left: 0.1em;
 	margin-top: 1em;
@@ -110,12 +112,24 @@ body {
 
 .selected-things {
 	list-style: none;
-	width: 14em;
+	width: 18em;
 	padding-left: 0;
 
 	li {
 		margin-bottom: 1.1em;
 	}
+}
+
+.share-button {
+	padding: 1.5em 4em;
+	background: @green;
+	color: #fff;
+	outline: none;
+	border: none;
+	font-size: 1em;
+	border-radius: 3px;
+	margin-top: 3em;
+	cursor: pointer;
 }
 
 .ion-minus,

@@ -2,70 +2,80 @@
   {
     "navn": "Brevandring",
     "bilde": "Brevandring",
-    "pris": 500,
+    "pris": 1750,
     "selected": false,
-    "vanskelighetsgrad": "orange"
+    "beskrivelse": "Brevandring fra 3-7 dager",
+    "vanskelighetsgrad": "red"
   },
   {
     "navn": "Ekspedisjonskurs",
     "bilde": "Ekspedisjonskurs",
     "pris": 500,
+    "beskrivelse": "Innføring I ferdigheter og rutiner",
     "selected": false,
     "vanskelighetsgrad": "green"
   },
   {
     "navn": "Fiske",
     "bilde": "Fiske",
-    "pris": 100,
+    "pris": 450,
     "selected": false,
+    "beskrivelse": "Pilking, fluefiske eller makk? Vi tar deg med dit fisken er",
     "vanskelighetsgrad": "red"
   },
   {
     "navn": "Hundekjøring",
     "bilde": "Hundekjoring",
-    "pris": 100,
+    "pris": 450,
+    "beskrivelse": "Opplev hundekjøring",
     "selected": false,
     "vanskelighetsgrad": "green"
   },
   {
     "navn": "Langtur på Ski",
     "bilde": "langturpaski",
-    "pris": 100,
+    "pris": 2650,
+    "beskrivelse": "Ut på langtur med ski på bena, 3-5 dager",
     "selected": false,
     "vanskelighetsgrad": "orange"
   },
   {
     "navn": "Seiltur",
     "bilde": "seiltur",
-    "pris": 100,
+    "pris": 2750,
+    "beskrivelse": "Lær å seile under kontrollerte forhold",
     "selected": false,
     "vanskelighetsgrad": "green"
   },
   {
     "navn": "Skiekspedisjon",
     "bilde": "skiekspedisjon",
-    "pris": 100,
+    "pris": 6900,
     "selected": false,
+    "beskrivelse": "Dra på en ekte ekspedisjon med ski på bena, 6-9 dager",
     "vanskelighetsgrad": "red"
   },
   {
     "navn": "Skiseiling",
     "bilde": "skisail",
-    "pris": 100,
+    "pris": 1090,
     "selected": false,
+    "beskrivelse": "Lær deg skiseiling på 1-2-3",
     "vanskelighetsgrad": "orange"
   },
   {
     "navn": "Telttur",
     "bilde": "telttur",
-    "pris": 100,
+    "pris": 1350,
+    "beskrivelse": "Introduksjon til vinterfriluftsliv",
     "selected": false,
     "vanskelighetsgrad": "green"
   },
   {
     "navn": "Topptur",
     "bilde": "topptur",
-    "pris": 100,
+    "pris": 500,
+    "beskrivelse": "Topptur for nybegynnere",
     "selected": false,
     "vanskelighetsgrad": "orange"
   },

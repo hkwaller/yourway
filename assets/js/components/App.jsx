@@ -31,9 +31,7 @@ class App extends Component {
       if (tur.bilde === e.target.classList[1]) {
         if (this.state.turer[index].selected) {
           this.state.turer[index].selected = false;
-          this.state.selectedTours.splice(index, 1)
-
-          return;
+          this.state.selectedTours.splice(index, 1);
         } else {
           this.state.turer[index].selected = true;
           this.setState({
@@ -42,7 +40,6 @@ class App extends Component {
         }
       }
     })
-
   }
 
   activityClick = (e) => {
@@ -55,7 +52,6 @@ class App extends Component {
           this.setState({
             pris: this.state.pris - aktivitet.pris
           });
-          return;
         } else {
           this.state.aktiviteter[index].selected = true;
           this.setState({
@@ -78,7 +74,6 @@ class App extends Component {
           this.setState({
             pris: this.state.pris - pris
           });
-          return;
         } else {
           this.state.overnatting[index].selected = true;
           this.setState({
@@ -133,7 +128,6 @@ class App extends Component {
     let n = e.target.getAttribute('name');
     this.state.selectedTours.map((a, index) => {
       if (a.navn === n) {
-        console.log(n);
         this.state.selectedTours[index].selected = false;
         this.state.selectedTours.splice(index, 1);
       }
@@ -221,13 +215,13 @@ class App extends Component {
       <div className="app">
         <div className="left">
           <div className="row-heading">
-            <h2>Geografi</h2>
+            <h2>Hvor vil du dra?</h2>
           </div>
           <div className="card-row">
             {::this.renderTours()}
           </div>
           <div className="row-heading">
-            <h2>Aktiviteter</h2>
+            <h2>Hva vil du gjøre?</h2>
             <ul className="hero">
               <li><img src="img/green.png" />Krever ingen forkunnskaper</li>
               <li><img src="img/orange.png" />Moderat</li>
@@ -236,11 +230,11 @@ class App extends Component {
           </div>
           <div className="card-row">{::this.renderActivities()}</div>
           <div className="row-heading">
-            <h2>Overnatting</h2>
+            <h2>Hvordan vil du bo?</h2>
           </div>
           <div className="card-row">{::this.renderSleepOptions()}</div>
           <div className="row-heading">
-            <h2>Utstyr</h2>
+            <h2>Hva trenger du?</h2>
           </div>
           <div className="card-row">{::this.renderUtstyr()}</div>
         </div>
@@ -255,7 +249,7 @@ class App extends Component {
             <i className="ion-plus" onClick={() => this.editTravellers("add")}></i>
           </div>
           <div className="travellers-footnote">
-            Pris gjelder for 6-15 personer
+            Pris forutsetter mellom 6-15 personer
           </div>
           <h3>Pris</h3>
           <div className="price-row">
@@ -284,6 +278,10 @@ class App extends Component {
               return <li key={utstyr.navn}><Thumbnail objekt={utstyr} clicked={::this.utstyrCrossClicked} /></li>
             })}
           </ul>
+          {this.state.selectedTours.length !== 0 ||
+           this.state.selectedActivities.length !== 0 ||
+           this.state.selectedUtstyr.length !== 0 ||
+           this.state.selectedOvernatting.length !== 0 ? <button className="share-button">Inviter dine venner</button> : null}
         </div>
       </div>
     )
