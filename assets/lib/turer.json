@@ -34,4 +34,24 @@
     "bilde": "Svalbard",
     "selected": false
   },
+  {
+    "navn": "Finnmarksvidda",
+    "bilde": "Finnmarksvidda",
+    "selected": false
+  },
+  {
+    "navn": "Jotunheimen",
+    "bilde": "Jotunheimen",
+    "selected": false
+  },
+  {
+    "navn": "Lofoten",
+    "bilde": "Lofoten",
+    "selected": false
+  },
+  {
+    "navn": "Grønland",
+    "bilde": "Gronland",
+    "selected": false
+  },
 ]

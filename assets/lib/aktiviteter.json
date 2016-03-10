@@ -21,7 +21,7 @@
     "pris": 450,
     "selected": false,
     "beskrivelse": "Pilking, fluefiske eller makk? Vi tar deg med dit fisken er",
-    "vanskelighetsgrad": "red"
+    "vanskelighetsgrad": "green"
   },
   {
     "navn": "Hundekjøring",
@@ -78,5 +78,21 @@
     "beskrivelse": "Topptur for nybegynnere",
     "selected": false,
     "vanskelighetsgrad": "orange"
+  },
+  {
+    "navn": "Dykking",
+    "bilde": "Dykking",
+    "pris": 1300,
+    "beskrivelse": "Dykking (krever dykkelappen)",
+    "selected": false,
+    "vanskelighetsgrad": "orange"
+  },
+  {
+    "navn": "Kayak",
+    "bilde": "Kayak",
+    "pris": 500,
+    "beskrivelse": "Paddle kayak i fine omgivelser",
+    "selected": false,
+    "vanskelighetsgrad": "green"
   },
 ]

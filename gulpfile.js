@@ -34,12 +34,12 @@ gulp.task('watch:less', function () {
 })
 
 gulp.task('html', function () {
-  return gulp.src('./public/*.html')
+  return gulp.src('./public/**/*.html')
       .pipe(connect.reload());
 })
 
 gulp.task('watch:html', function () {
-  gulp.watch(['./public/*.html'], ['html']);
+  gulp.watch(['./public/**/*.html'], ['html']);
 })
 
 gulp.task('build', function () {

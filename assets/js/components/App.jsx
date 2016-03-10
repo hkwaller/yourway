@@ -210,6 +210,7 @@ class App extends Component {
     var myFirebaseRef = new Firebase("https://yourway.firebaseio.com/");
 
     let u = uuid.v1();
+
     window.localStorage.setItem("uuid", u);
 
     myFirebaseRef.child(u).set({
@@ -218,7 +219,8 @@ class App extends Component {
       overnatting: this.state.selectedOvernatting,
       utstyr: this.state.selectedUtstyr,
       pris: this.state.pris,
-      reisende: this.state.travellers
+      reisende: this.state.travellers,
+      email: ""
     });
 
     setTimeout(function() { browserHistory.push(`/finished`)}, 300)

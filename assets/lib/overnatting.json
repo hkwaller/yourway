@@ -46,5 +46,11 @@
     "pris": 500,
     "selected": false,
   },
+  {
+    "navn": "Mansthausen",
+    "bilde": "Mansthausen",
+    "pris": 1300,
+    "selected": false,
+  },
 
 ]

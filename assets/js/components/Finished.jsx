@@ -2,23 +2,33 @@ import React, { PropTypes, Component } from 'react'
 import Firebase from 'firebase';
 import { browserHistory } from 'react-router';
 
-let uuid = "";
-if (window.localStorage.getItem("uuid")) {
-  uuid = window.localStorage.getItem("uuid");
-}
+
 
 class Finished extends Component {
   constructor(props) {
     super(props);
-  }
 
+    this.state = {
+      uuid: ""
+    }
+  }
   buttonClicked() {
     var myFirebaseRef = new Firebase("https://yourway.firebaseio.com/");
-    myFirebaseRef.child(uuid).set({
+    myFirebaseRef.child(this.state.uuid).update({
       email: this.refs.email.value
     });
     browserHistory.push(`/takk`)
   }
+  componentWillMount() {
+    let u = "";
+    if (window.localStorage.getItem("uuid")) {
+      u = window.localStorage.getItem("uuid");
+      this.setState({
+        uuid: u
+      });
+    }
+  }
+
   render () {
     return (
       <div className="finished-container">
@@ -40,7 +50,7 @@ class Finished extends Component {
           <strong>Ha en fin dag videre!</strong>
           </div>
           <div className="finished-send">
-            <input type="text" placeholder="Skriv inn din email.." ref="email" />
+            <input type="email" placeholder="Skriv inn din email.." ref="email" required />
             <a href="/takk" className="share-button finished-btn" onClick={::this.buttonClicked}>Hold meg oppdatert!</a>
           </div>
         </div>
