@@ -1,11 +1,13 @@
 import React, { PropTypes, Component } from 'react';
 import Card from './Card.jsx';
 import Thumbnail from './Thumbnail';
-
+import { browserHistory } from 'react-router';
+import Firebase from 'firebase';
 import turer from '../../lib/turer.json';
 import aktiviteter from '../../lib/aktiviteter.json';
 import overnatting from '../../lib/overnatting.json';
 import utstyr from '../../lib/utstyr.json';
+import uuid from 'node-uuid';
 
 
 class App extends Component {
@@ -32,10 +34,15 @@ class App extends Component {
         if (this.state.turer[index].selected) {
           this.state.turer[index].selected = false;
           this.state.selectedTours.splice(index, 1);
+
+          this.setState({
+            pris: this.state.pris
+          });
         } else {
           this.state.turer[index].selected = true;
           this.setState({
             selectedTours: this.state.selectedTours.concat([tur]),
+            pris: this.state.pris
           });
         }
       }
@@ -195,6 +202,28 @@ class App extends Component {
     })
   }
 
+  saveTrip() {
+    window.localStorage.setItem("turer", JSON.stringify(this.state.selectedTours));
+    window.localStorage.setItem("aktiviteter", JSON.stringify(this.state.selectedActivities));
+    window.localStorage.setItem("overnatting", JSON.stringify(this.state.selectedOvernatting));
+    window.localStorage.setItem("utstyr", JSON.stringify(this.state.selectedUtstyr));
+    var myFirebaseRef = new Firebase("https://yourway.firebaseio.com/");
+
+    let u = uuid.v1();
+    window.localStorage.setItem("uuid", u);
+
+    myFirebaseRef.child(u).set({
+      turer: this.state.selectedTours,
+      aktiviteter: this.state.selectedActivities,
+      overnatting: this.state.selectedOvernatting,
+      utstyr: this.state.selectedUtstyr,
+      pris: this.state.pris,
+      reisende: this.state.travellers
+    });
+
+    setTimeout(function() { browserHistory.push(`/finished`)}, 300)
+  }
+
   editTravellers(type) {
 
     if (type === "add") {
@@ -223,9 +252,9 @@ class App extends Component {
           <div className="row-heading">
             <h2>Hva vil du gjøre?</h2>
             <ul className="hero">
-              <li><img src="img/green.png" />Krever ingen forkunnskaper</li>
-              <li><img src="img/orange.png" />Moderat</li>
-              <li><img src="img/red.png" />Krevende</li>
+              <li><img src="public/img/green.png" />Krever ingen forkunnskaper</li>
+              <li><img src="public/img/orange.png" />Moderat</li>
+              <li><img src="public/img/red.png" />Krevende</li>
             </ul>
           </div>
           <div className="card-row">{::this.renderActivities()}</div>
@@ -281,7 +310,7 @@ class App extends Component {
           {this.state.selectedTours.length !== 0 ||
            this.state.selectedActivities.length !== 0 ||
            this.state.selectedUtstyr.length !== 0 ||
-           this.state.selectedOvernatting.length !== 0 ? <button className="share-button">Inviter dine venner</button> : null}
+           this.state.selectedOvernatting.length !== 0 ? <button onClick={::this.saveTrip} className="share-button">Inviter dine venner</button> : null}
         </div>
       </div>
     )
